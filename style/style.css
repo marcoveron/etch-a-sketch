@@ -1,0 +1,16 @@
+.column {
+    display: flex;
+}
+
+.row {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border: black solid 2px;
+    transition: background-color 0.5s;
+}
+
+.row:hover {
+    color: blue;
+    background-color: blue;
+}

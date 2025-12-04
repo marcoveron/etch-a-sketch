@@ -9,6 +9,7 @@ for (let i = 0; i<16; i++){
     for (let j = 0; j<16; j++){
         row = document.createElement("div");
         row.className = 'row';
+        row.addEventListener("mouseover", (event) => [event.target.style.backgroundColor = "white", event.target.style.border = "1px solid white"])
         column.appendChild(row);
     }
 }
@@ -32,6 +33,8 @@ function insertGrid(size) {
         y.remove();
     }
 
+    let width = 500/(size);
+
     for (let i = 0; i<size; i++){
         column = document.createElement("div");
         column.className = 'column';
@@ -39,11 +42,14 @@ function insertGrid(size) {
         for (let j = 0; j<size; j++){
             row = document.createElement("div");
             row.className = 'row';
+            row.style.width = `${width}px`;
+            row.style.height = `${width}px`;
+            row.addEventListener("mouseover", (event) => [event.target.style.backgroundColor = "white", event.target.style.border = "1px solid white"])
             column.appendChild(row);
         }
     }
 }
 
-newGridButton.addEventListener("click", () => insertGrid(newGridSize = window.prompt("Please enter the new size of your window")));
+newGridButton.addEventListener("click", () => insertGrid(newGridSize = window.prompt("Please enter the new size of your grid")));
 
 

@@ -1,17 +1,40 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    flex-direction: column;
+    padding: 55px;
+    background-color: chocolate;
+}
+
+.container {
+    max-width: 500px;
+    max-height: 500px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
 .column {
     display: flex;
 }
 
 .row {
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border: black solid 2px;
-    transition: background-color 0.5s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0.1px solid black;
+    width: 31.25px;
+    height: 31.25px;
+    background-color: gold;
+    transition: background-color 0.s;
 }
 
-.row:hover {
-    background-color: white;
+button {
+    background-color: black;
+    color: gold;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
 }
-
 
